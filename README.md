@@ -6,6 +6,14 @@ Challenges live in memory for the session: they can be created, marked completed
 
 > **Follow-along project.** This app was built while following **React — The Complete Guide (Academind / Maximilian Schwarzmüller)**. It is included in the portfolio as a learning exercise, not as a production product. The implementation is my own work based on the course material.
 
+## Live demo
+
+| | |
+| --- | --- |
+| **Live site** | https://mariogranada.github.io/react-animations/ |
+| **Repository** | https://github.com/MarioGranada/react-animations |
+| **Portfolio summary** | Framer Motion playground: a challenge tracker with scroll-linked parallax, shared-layout tabs, animated list transitions and a shake-validated modal form. |
+
 ## Features
 
 - Scroll-linked parallax and opacity on the welcome page.
@@ -101,6 +109,7 @@ The app has two routes: `/` and `/challenges`.
 
 ## Deployment
 
+- **Live:** `.github/workflows/deploy.yml` builds the app on every push to the default branch and publishes `dist/` (plus a `404.html` SPA fallback) to the `gh-pages` branch, which GitHub Pages serves at https://mariogranada.github.io/react-animations/.
 - Target: GitHub Actions can build the Vite app and publish `dist/` to GitHub Pages.
 - Because the app uses client-side routing, the host must rewrite unknown paths to `index.html`; otherwise a direct visit to `/challenges` returns 404.
 - Set the Vite `base` option to the repository path when deploying to a project Pages site.
